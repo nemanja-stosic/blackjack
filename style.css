@@ -81,6 +81,11 @@ button {
         margin: 10px 0;
         /* Add vertical margin */
     }
+
+    #lose-img {
+        width: 440px;
+    }
+
 }
 
 #new-game-button {
