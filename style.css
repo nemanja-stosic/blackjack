@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202210/0814/TWpOjSegV0eb0lJNiG99iQJc.png');
+    background-size: cover;
+    text-align: center;
+    font-size: 24pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+.container {}
+
+#message {
+    font-style: italic;
+}
+
+button {
+    color: #016f32;
+    width: 150px;
+    height: 30px;
+    background: goldenrod;
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options button {
+    margin: 2px;
+}
+
+.player-choice-div {
+    display: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    /* By default, arrange cards horizontally */
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    width: auto;
+    /* Reset the width */
+    max-width: 200px;
+    margin: 0 10px;
+    /* Add horizontal margin */
+}
+
+.win-lose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .cards-container {
+        flex-direction: column;
+        /* Arrange cards vertically on smaller screens */
+        justify-content: center;
+        align-items: center;
+        /* Align cards to the left */
+    }
+
+    .card-image {
+        margin: 10px 0;
+        /* Add vertical margin */
+    }
+}
+
+#new-game-button {
+    display: none;
+}
+
+#player-money {
+    padding: 10px;
+}
+
+#win-img {
+    display: none;
+}
+
+#lose-img {
+    display: none;
+}
