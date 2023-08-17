@@ -101,6 +101,16 @@ function startGame() {
     document.querySelector('#start-game-button').style.display = 'none';
 }
 
+function scrollToTop() {
+    let newCardButton = document.getElementById('new-card-button');
+    newCardButton.click();
+    newCardButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 async function renderGame() {
     let img1Src = await getCardImageUrl();
@@ -149,6 +159,7 @@ async function renderGame() {
             message = '';
             hasBlackJack = true;
             document.querySelector('#new-game-button').style.display = 'block';
+            scrollToTop();
         } else {
             if (firstCardStilAce || secondCardStilAce) {
                 console.log('dont lose')
@@ -157,6 +168,7 @@ async function renderGame() {
                 message = '';
                 isAlive = false;
                 document.querySelector('#new-game-button').style.display = 'block';
+                scrollToTop();
             }
         }
 
@@ -198,12 +210,14 @@ function reRenderGame() {
         message = '';
         hasBlackJack = true;
         document.querySelector('#new-game-button').style.display = 'block';
+        scrollToTop();
     } else {
         document.querySelector('#lose-img').style.display = 'block';
         takePlayerMoney(50);
         message = '';
         isAlive = false;
         document.querySelector('#new-game-button').style.display = 'block';
+        scrollToTop();
     }
 
     messageParagraph.textContent = message;
