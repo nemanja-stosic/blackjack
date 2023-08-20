@@ -20,7 +20,7 @@ let secondCardStilAce = false;
 let drawnCardIsAce = false;
 let message = '';
 let player = {
-    name: 'Nemanja',
+    name: 'Gamer',
     money: 0
 };
 let playerMoneyParagraph = document.getElementById('player-money');
@@ -103,7 +103,6 @@ function startGame() {
 
 function scrollToTop() {
     let newCardButton = document.getElementById('new-card-button');
-    newCardButton.click();
     newCardButton.addEventListener("click", function () {
         window.scrollTo({
             top: 0,
